@@ -121,13 +121,13 @@
     <value>关于</value>
   </data>
   <data name="ActionWhenConversionSucceedDescription" xml:space="preserve">
-    <value>指定转换成功后对文件的操作</value>
+    <value>允许在转换成功后选择如何处理源文件</value>
   </data>
   <data name="ActionWhenConversionSucceedTitle" xml:space="preserve">
-    <value>转换成功时的操作</value>
+    <value>转换成功后的操作</value>
   </data>
   <data name="AddNewPreset" xml:space="preserve">
-    <value>新的预设</value>
+    <value>新建预设</value>
   </data>
   <data name="Application" xml:space="preserve">
     <value>应用</value>
@@ -136,22 +136,22 @@
     <value>音频</value>
   </data>
   <data name="AutomaticallyCheckForUpdates" xml:space="preserve">
-    <value>File Converter 启动时自动检查更新</value>
+    <value>自动检查更新</value>
   </data>
   <data name="AutomaticallyExitWhenAllConversionsFinished" xml:space="preserve">
-    <value>所有转换完成后自动退出</value>
+    <value>转换完成后自动退出</value>
   </data>
   <data name="ClampToLowestPowerOfTwoSize" xml:space="preserve">
-    <value>缩小到最接近的2的次方大小（例 512x512）</value>
+    <value>缩小至 2 的幂尺寸（如 256、512、1024）</value>
   </data>
   <data name="Close" xml:space="preserve">
     <value>关闭</value>
   </data>
   <data name="ConversionPresets" xml:space="preserve">
-    <value>转换设置</value>
+    <value>预设</value>
   </data>
   <data name="ConversionQueueTitle" xml:space="preserve">
-    <value>要转换的文件</value>
+    <value>转换队列</value>
   </data>
   <data name="ConvertedFrom" xml:space="preserve">
     <value>转换自</value>
@@ -178,7 +178,7 @@
     <value>当我退出 File Converter 时安装</value>
   </data>
   <data name="Encoding" xml:space="preserve">
-    <value>正在编码：</value>
+    <value>编码：</value>
   </data>
   <data name="EncodingSpeed" xml:space="preserve">
     <value>编码速度：</value>
@@ -196,7 +196,7 @@
     <value>文件名模板</value>
   </data>
   <data name="FramesPerSecond" xml:space="preserve">
-    <value>每秒帧数：</value>
+    <value>帧率：</value>
   </data>
   <data name="GitHubButtonDescription" xml:space="preserve">
     <value>打开 GitHub 项目页面</value>
@@ -211,10 +211,10 @@
     <value>输入格式</value>
   </data>
   <data name="InputPostConversionActionDeleteName" xml:space="preserve">
-    <value>删除</value>
+    <value>删除源文件</value>
   </data>
   <data name="InputPostConversionActionMoveInArchiveFolderName" xml:space="preserve">
-    <value>移动到压缩包中</value>
+    <value>移动到归档文件夹</value>
   </data>
   <data name="InputPostConversionActionNoneName" xml:space="preserve">
     <value>无</value>
@@ -229,10 +229,10 @@
     <value>报告问题</value>
   </data>
   <data name="MoveDownSelectedPreset" xml:space="preserve">
-    <value>将所选项下移</value>
+    <value>下移选项</value>
   </data>
   <data name="MoveUpSelectedPreset" xml:space="preserve">
-    <value>将所选项上移</value>
+    <value>上移选项</value>
   </data>
   <data name="Mp3CbrDescription" xml:space="preserve">
     <value>恒定比特率编码</value>
@@ -247,7 +247,7 @@
     <value>逆时针旋转 90°</value>
   </data>
   <data name="Ok" xml:space="preserve">
-    <value>Ok</value>
+    <value>确定</value>
   </data>
   <data name="OneEightyDegreesRotationTitle" xml:space="preserve">
     <value>180°</value>
@@ -259,7 +259,7 @@
     <value>C:\Music\Artist\Album\Song.wav</value>
   </data>
   <data name="OutputExample" xml:space="preserve">
-    <value>输出</value>
+    <value>输出示例</value>
   </data>
   <data name="OutputFilePathTemplateHelp" xml:space="preserve">
     <value>(p): 输入文件路径
@@ -278,7 +278,7 @@
 (p:v): 视频
 (p:p): 图片
 
-使用 maj 表示大写</value>
+使用大写字母表示大写</value>
   </data>
   <data name="OutputFormat" xml:space="preserve">
     <value>输出格式</value>
@@ -293,7 +293,7 @@
     <value>质量：</value>
   </data>
   <data name="RecommendedBitrateRangeInBlue" xml:space="preserve">
-    <value>建议蓝光比特率范围</value>
+    <value>蓝色区域为推荐范围</value>
   </data>
   <data name="RemoveSelectedPreset" xml:space="preserve">
     <value>删除</value>
@@ -305,7 +305,7 @@
     <value>保存</value>
   </data>
   <data name="Scale" xml:space="preserve">
-    <value>范围：</value>
+    <value>缩放：</value>
   </data>
   <data name="SeeChangeLog" xml:space="preserve">
     <value>请参阅更改日志……</value>
@@ -332,7 +332,7 @@
     <value>File Converter 更新</value>
   </data>
   <data name="VideoEncodingQualityTooltip" xml:space="preserve">
-    <value>定义“文件大小”与“视频质量”的比重。较小的比重可以让您的文件占用更小，较大的比重可以让您的视频质量更高。</value>
+    <value>定义“文件大小”与“视频质量”的比例。值越低，文件越小；值越高，视频质量越好。</value>
   </data>
   <data name="VideoEncodingSpeedFasterName" xml:space="preserve">
     <value>更快</value>
@@ -353,7 +353,7 @@
     <value>超快</value>
   </data>
   <data name="VideoEncodingSpeedTooltip" xml:space="preserve">
-    <value>定义“文件大小”与“压缩时间”的比重。对于相同的视频质量，与快速压缩相比，慢速压缩将为您提供更小的文件。</value>
+    <value>定义“文件大小”与“压缩时间”的比例。压缩速度越慢，在相同视频质量下文件越小；压缩速度越快，压缩时间越短。</value>
   </data>
   <data name="VideoEncodingSpeedUltraFastName" xml:space="preserve">
     <value>超快速</value>
@@ -398,7 +398,7 @@
     <value>失败</value>
   </data>
   <data name="ConversionStateInQueue" xml:space="preserve">
-    <value>在队列中</value>
+    <value>转换中</value>
   </data>
   <data name="ConversionStateReadIntputImage" xml:space="preserve">
     <value>读取输入的图像</value>
@@ -428,16 +428,16 @@
     <value>语言</value>
   </data>
   <data name="MaximumNumberOfSimultaneousConversions" xml:space="preserve">
-    <value>同时转换的最大数量</value>
+    <value>最大同时转换数</value>
   </data>
   <data name="DefaultPresetName" xml:space="preserve">
-    <value>新预设</value>
+    <value>预设</value>
   </data>
   <data name="DownloadingChangeLog" xml:space="preserve">
     <value>###正在下载更新日志……</value>
   </data>
   <data name="ConversionArchives" xml:space="preserve">
-    <value>转换压缩包</value>
+    <value>归档</value>
   </data>
   <data name="ErrorCanceled" xml:space="preserve">
     <value>取消。</value>
@@ -482,7 +482,7 @@
     <value>不支持的输出格式'{0}'。</value>
   </data>
   <data name="ChannelCountTitle" xml:space="preserve">
-    <value>通道计数：</value>
+    <value>通道：</value>
   </data>
   <data name="ChannelCountTooltip" xml:space="preserve">
     <value>修改输入文件的通道数量。</value>
@@ -491,7 +491,7 @@
     <value>单声道</value>
   </data>
   <data name="SameChannelCountOption" xml:space="preserve">
-    <value>与输入文件相同</value>
+    <value>与源文件相同</value>
   </data>
   <data name="StereoOption" xml:space="preserve">
     <value>立体声</value>
@@ -521,7 +521,7 @@
     <value>无法找到输出文件。</value>
   </data>
   <data name="ErrorConversionFailedWithOutput" xml:space="preserve">
-    <value>转换失败，但输出文件确实存在。</value>
+    <value>转换任务失败，但输出文件已存在。</value>
   </data>
   <data name="ConversionStatePrepareConversion" xml:space="preserve">
     <value>准备转换</value>
@@ -548,10 +548,10 @@
     <value>转换任务初始化时出错。</value>
   </data>
   <data name="CreateANewFolder" xml:space="preserve">
-    <value>新文件夹</value>
+    <value>新建文件夹</value>
   </data>
   <data name="DefaultFolderName" xml:space="preserve">
-    <value>新文件夹</value>
+    <value>文件夹</value>
   </data>
   <data name="PresetFolder" xml:space="preserve">
     <value>文件夹</value>
@@ -590,6 +590,12 @@
     <value>无法加载 File Converter 用户设置。您想恢复默认设置吗？</value>
   </data>
   <data name="CopyFilesInClipboardAfterConversion" xml:space="preserve">
-    <value>转换后将文件复制到剪贴板</value>
+    <value>转换完成后复制文件到剪贴板</value>
+  </data>
+  <data name="HardwareAccelerationMode" xml:space="preserve">
+    <value>硬件加速模式</value>
+  </data>
+  <data name="HardwareAccelerationModeOffName" xml:space="preserve">
+    <value>关闭</value>
   </data>
 </root>
