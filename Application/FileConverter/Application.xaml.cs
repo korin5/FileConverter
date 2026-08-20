@@ -49,6 +49,7 @@ namespace FileConverter
         private bool verbose;
         private bool showSettings;
         private bool showHelp;
+        private bool restartExplorer;
 
         [DllImport("kernel32.dll")]
         static extern bool AttachConsole(uint dwProcessId);
@@ -121,6 +122,17 @@ namespace FileConverter
             if (this.verbose)
             {
                 navigationService.Show(Pages.Diagnostics);
+            }
+
+            if (this.restartExplorer)
+            {
+                foreach (var process in Process.GetProcessesByName("explorer"))
+                {
+                    process.Kill();
+                    process.WaitForExit();
+                }
+
+                Process.Start("explorer.exe");
             }
         }
 
@@ -371,6 +383,11 @@ namespace FileConverter
                             }
 
                             break;
+
+                        case "restart-explorer":
+                            this.restartExplorer = true;
+                            Application.AskForShutdown();
+                            return;
 
                         default:
                             Debug.LogError($"Unknown application argument: '--{parameterTitle}'.");

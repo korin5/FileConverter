@@ -16,13 +16,15 @@
 
         <CustomAction Id="InstallShell" ExeCommand="--register-shell-extension &quot;[INSTALLFOLDER]FileConverterExtension.dll&quot;" Execute="deferred" Return="check" Impersonate="no" FileRef="FileConverter.exe" />
         <CustomAction Id="UninstallShell" ExeCommand="--unregister-shell-extension &quot;[INSTALLFOLDER]FileConverterExtension.dll&quot;" Execute="deferred" Return="check" Impersonate="no" FileRef="FileConverter.exe" />
-        <CustomAction Id="PostInstallInit" ExeCommand="--post-install-init" Execute="immediate" FileRef="FileConverter.exe" />
+		<CustomAction Id="PostInstallInit" ExeCommand="--post-install-init" Execute="immediate" FileRef="FileConverter.exe" />
+		<CustomAction Id="RestartExplorer" ExeCommand="--restart-explorer" Execute="immediate" FileRef="FileConverter.exe" />
 
         <UI>
             <ProgressText Action="InstallFiles" Template="File: [1],  Directory: [9],  Size: [6]" Message="Copying new files" />
             <ProgressText Action="InstallShell" Message="Register shell extension to Windows Explorer" />
             <ProgressText Action="UninstallShell" Message="Unregister shell extension from Windows Explorer" />
             <ProgressText Action="PostInstallInit" Message="Initialize conversion presets" />
+			<ProgressText Action="RestartExplorer" Message="Restart Windows Explorer" />
         </UI>
 
         <PropertyRef Id="WIX_IS_NETFRAMEWORK_48_OR_LATER_INSTALLED" />
@@ -32,6 +34,7 @@
             <Custom Action="UninstallShell" Before="RemoveRegistryValues" Condition="(NOT UPGRADINGPRODUCTCODE) AND (REMOVE~=&quot;ALL&quot;)" />
             <Custom Action="InstallShell" After="WriteRegistryValues" Condition="NOT Installed" />
             <Custom Action="PostInstallInit" After="InstallFinalize" Condition="NOT Installed" />
+            <Custom Action="RestartExplorer" After="PostInstallInit" Condition="NOT Installed" />
         </InstallExecuteSequence>
         
         <ui:WixUI Id="WixUI_InstallDir" />
