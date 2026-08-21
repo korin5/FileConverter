@@ -216,25 +216,25 @@ namespace FileConverter.ConversionJobs
             Debug.Log($"Convert image (output: {this.OutputFilePath}).");
             switch (this.ConversionPreset.OutputType)
             {
-                case OutputType.Avif:
+                case OutputType.avif:
                     image.Quality = this.ConversionPreset.GetSettingsValue<uint>(ConversionPreset.ConversionSettingKeys.ImageQuality);
                     break;
 
-                case OutputType.Png:
+                case OutputType.png:
                     // http://stackoverflow.com/questions/27267073/imagemagick-lossless-max-compression-for-png
                     image.Quality = 95;
                     break;
 
-                case OutputType.Jpg:
+                case OutputType.jpg:
                     image.Quality = this.ConversionPreset.GetSettingsValue<uint>(ConversionPreset.ConversionSettingKeys.ImageQuality);
                     break;
 
-                case OutputType.Pdf:
+                case OutputType.pdf:
                     Debug.Log($"Density: {BaseDpiForPdfConversion}dpi.");
                     image.Density = new Density(BaseDpiForPdfConversion);
                     break;
 
-                case OutputType.Webp:
+                case OutputType.webp:
                     image.Quality = this.ConversionPreset.GetSettingsValue<uint>(ConversionPreset.ConversionSettingKeys.ImageQuality);
                     break;
 

@@ -32,7 +32,7 @@ namespace FileConverter.ConversionJobs
 
         protected override int GetOutputFilesCount()
         {
-            if (this.ConversionPreset.OutputType == OutputType.Pdf)
+            if (this.ConversionPreset.OutputType == OutputType.pdf)
             {
                 return 1;
             }
@@ -61,7 +61,7 @@ namespace FileConverter.ConversionJobs
             }
 
             // Initialize converters.
-            if (this.ConversionPreset.OutputType == OutputType.Pdf)
+            if (this.ConversionPreset.OutputType == OutputType.pdf)
             {
                 this.intermediateFilePath = this.OutputFilePath;
             }

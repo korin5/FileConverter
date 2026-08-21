@@ -42,7 +42,7 @@ namespace FileConverter.ConversionJobs
             float scaleFactor = conversionPreset.GetSettingsValue<float>(ConversionPreset.ConversionSettingKeys.VideoScale);
             string scaleArgs = string.Empty;
 
-            if (conversionPreset.OutputType == OutputType.Mkv || conversionPreset.OutputType == OutputType.Mp4)
+            if (conversionPreset.OutputType == OutputType.mkv || conversionPreset.OutputType == OutputType.mp4)
             {
                 // This presets use h264 codec, the size of the video need to be divisible by 2.
                 switch (hwAccel)
@@ -104,7 +104,7 @@ namespace FileConverter.ConversionJobs
                 transformArgs += rotationArgs;
             }
 
-            if (hwAccel != Helpers.HardwareAccelerationMode.CUDA && (conversionPreset.OutputType == OutputType.Mkv || conversionPreset.OutputType == OutputType.Mp4))
+            if (hwAccel != Helpers.HardwareAccelerationMode.CUDA && (conversionPreset.OutputType == OutputType.mkv || conversionPreset.OutputType == OutputType.mp4))
             {
                 // For H.264 in MP4/MKV, force yuv420p for broad player compatibility:
                 // http://trac.ffmpeg.org/wiki/Encode/H.264#Encodingfordumbplayers

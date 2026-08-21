@@ -72,22 +72,22 @@ namespace FileConverter.ViewModels
             this.Settings = settingsService.Settings;
 
             List<OutputTypeViewModel> outputTypeViewModels = new List<OutputTypeViewModel>();
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Ogg));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Mp3));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Aac));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Flac));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Wav));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Mkv));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Mp4));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Ogv));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Webm));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Avi));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Png));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Jpg));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Webp));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Ico));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Gif));
-            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.Pdf));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.ogg));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.mp3));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.aac));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.flac));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.wav));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.mkv));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.mp4));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.ogv));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.webm));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.avi));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.png));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.jpg));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.webp));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.ico));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.gif));
+            outputTypeViewModels.Add(new OutputTypeViewModel(OutputType.pdf));
             this.outputTypes = new ListCollectionView(outputTypeViewModels);
             this.outputTypes.GroupDescriptions.Add(new PropertyGroupDescription("Category"));
 
@@ -573,7 +573,7 @@ namespace FileConverter.ViewModels
             }
             else
             {
-                newPreset = new ConversionPreset(presetName, OutputType.Mkv, new string[0]);
+                newPreset = new ConversionPreset(presetName, OutputType.mkv, new string[0]);
             }
 
             PresetNode node = new PresetNode(newPreset, parent);

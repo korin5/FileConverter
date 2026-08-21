@@ -415,27 +415,27 @@ namespace FileConverter
             switch (outputType)
             {
                 // Audio
-                case OutputType.Aac:
+                case OutputType.aac:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioBitrate, "128");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioChannelCount, "0");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableFFMPEGCustomCommand, "False");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Flac:
+                case OutputType.flac:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioChannelCount, "0");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableFFMPEGCustomCommand, "False");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Ogg:
+                case OutputType.ogg:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioBitrate, "160");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioChannelCount, "0");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableFFMPEGCustomCommand, "False");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Mp3:
+                case OutputType.mp3:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioEncodingMode, EncodingMode.Mp3VBR.ToString(), true);
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioBitrate, "190");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioChannelCount, "0");
@@ -443,7 +443,7 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Wav:
+                case OutputType.wav:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioEncodingMode, EncodingMode.Wav16.ToString(), true);
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioChannelCount, "0");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableFFMPEGCustomCommand, "False");
@@ -451,7 +451,7 @@ namespace FileConverter
                     break;
 
                 // Video
-                case OutputType.Avi:
+                case OutputType.avi:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableAudio, "True");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoQuality, "20");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoScale, "1");
@@ -461,7 +461,7 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Mkv:
+                case OutputType.mkv:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableAudio, "True");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoQuality, "28");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoEncodingSpeed, "Medium");
@@ -472,7 +472,7 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Mp4:
+                case OutputType.mp4:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableAudio, "True");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoQuality, "28");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoEncodingSpeed, "Medium");
@@ -483,7 +483,7 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Ogv:
+                case OutputType.ogv:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableAudio, "True");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoQuality, "7");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoScale, "1");
@@ -493,7 +493,7 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.FFMPEGCustomCommand, string.Empty);
                     break;
 
-                case OutputType.Webm:
+                case OutputType.webm:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.EnableAudio, "True");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.AudioBitrate, "160");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoQuality, "40");
@@ -504,7 +504,7 @@ namespace FileConverter
                     break;
 
                 // Images
-                case OutputType.Avif:
+                case OutputType.avif:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageQuality, "50");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageScale, "1");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageRotation, "0");
@@ -512,20 +512,20 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageMaximumSize, "0");
                     break;
 
-                case OutputType.Gif:
+                case OutputType.gif:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoScale, "1");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoRotation, "0");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.VideoFramesPerSecond, "15");
                     break;
 
-                case OutputType.Png:
+                case OutputType.png:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageScale, "1");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageRotation, "0");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageClampSizePowerOf2, "False");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageMaximumSize, "0");
                     break;
 
-                case OutputType.Jpg:
+                case OutputType.jpg:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageQuality, "90");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageScale, "1");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageRotation, "0");
@@ -533,7 +533,7 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageMaximumSize, "0");
                     break;
 
-                case OutputType.Webp:
+                case OutputType.webp:
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageQuality, "40");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageScale, "1");
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageRotation, "0");
@@ -541,11 +541,11 @@ namespace FileConverter
                     this.InitializeSettingsValue(ConversionPreset.ConversionSettingKeys.ImageMaximumSize, "0");
                     break;
 
-                case OutputType.Ico:
+                case OutputType.ico:
                     break;
 
                 // Documents
-                case OutputType.Pdf:
+                case OutputType.pdf:
                     break;
 
                 default:

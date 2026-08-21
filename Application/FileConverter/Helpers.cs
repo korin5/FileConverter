@@ -199,31 +199,31 @@ namespace FileConverter
 
             switch (outputType)
             {
-                case OutputType.Aac:
-                case OutputType.Flac:
-                case OutputType.Mp3:
-                case OutputType.Ogg:
-                case OutputType.Wav:
+                case OutputType.aac:
+                case OutputType.flac:
+                case OutputType.mp3:
+                case OutputType.ogg:
+                case OutputType.wav:
                     return category == InputCategoryNames.Audio || category == InputCategoryNames.Video;
 
-                case OutputType.Avi:
-                case OutputType.Mkv:
-                case OutputType.Mp4:
-                case OutputType.Ogv:
-                case OutputType.Webm:
+                case OutputType.avi:
+                case OutputType.mkv:
+                case OutputType.mp4:
+                case OutputType.ogv:
+                case OutputType.webm:
                     return category == InputCategoryNames.Video || category == InputCategoryNames.AnimatedImage;
 
-                case OutputType.Avif:
-                case OutputType.Ico:
-                case OutputType.Jpg:
-                case OutputType.Png:
-                case OutputType.Webp:
+                case OutputType.avif:
+                case OutputType.ico:
+                case OutputType.jpg:
+                case OutputType.png:
+                case OutputType.webp:
                     return category == InputCategoryNames.Image || category == InputCategoryNames.Document || category == InputCategoryNames.AnimatedImage;
 
-                case OutputType.Gif:
+                case OutputType.gif:
                     return category == InputCategoryNames.Image || category == InputCategoryNames.Video || category == InputCategoryNames.AnimatedImage;
 
-                case OutputType.Pdf:
+                case OutputType.pdf:
                     return category == InputCategoryNames.Image || category == InputCategoryNames.Document;
 
                 default:

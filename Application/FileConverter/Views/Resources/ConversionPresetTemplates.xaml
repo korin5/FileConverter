@@ -618,46 +618,46 @@
     <Style x:Key="OutputTypeSelectorStyle" TargetType="{x:Type ContentControl}">
         <Setter Property="ContentTemplate" Value="{StaticResource EmptyDataTemplate}"/>
         <Style.Triggers>
-            <DataTrigger Binding="{Binding OutputType}" Value="Aac">
+            <DataTrigger Binding="{Binding OutputType}" Value="aac">
                 <Setter Property="ContentTemplate" Value="{StaticResource AacSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Avi">
+            <DataTrigger Binding="{Binding OutputType}" Value="avi">
                 <Setter Property="ContentTemplate" Value="{StaticResource AviSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Flac">
+            <DataTrigger Binding="{Binding OutputType}" Value="flac">
                 <Setter Property="ContentTemplate" Value="{StaticResource FlacSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Gif">
+            <DataTrigger Binding="{Binding OutputType}" Value="gif">
                 <Setter Property="ContentTemplate" Value="{StaticResource GifSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Jpg">
+            <DataTrigger Binding="{Binding OutputType}" Value="jpg">
                 <Setter Property="ContentTemplate" Value="{StaticResource JpgSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Mkv">
+            <DataTrigger Binding="{Binding OutputType}" Value="mkv">
                 <Setter Property="ContentTemplate" Value="{StaticResource MkvSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Mp3">
+            <DataTrigger Binding="{Binding OutputType}" Value="mp3">
                 <Setter Property="ContentTemplate" Value="{StaticResource Mp3SettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Mp4">
+            <DataTrigger Binding="{Binding OutputType}" Value="mp4">
                 <Setter Property="ContentTemplate" Value="{StaticResource MkvSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Ogg">
+            <DataTrigger Binding="{Binding OutputType}" Value="ogg">
                 <Setter Property="ContentTemplate" Value="{StaticResource OggSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Ogv">
+            <DataTrigger Binding="{Binding OutputType}" Value="ogv">
                 <Setter Property="ContentTemplate" Value="{StaticResource OgvSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Png">
+            <DataTrigger Binding="{Binding OutputType}" Value="png">
                 <Setter Property="ContentTemplate" Value="{StaticResource PngSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Wav">
+            <DataTrigger Binding="{Binding OutputType}" Value="wav">
                 <Setter Property="ContentTemplate" Value="{StaticResource WavSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Webm">
+            <DataTrigger Binding="{Binding OutputType}" Value="webm">
                 <Setter Property="ContentTemplate" Value="{StaticResource WebmSettingsDataTemplate}"/>
             </DataTrigger>
-            <DataTrigger Binding="{Binding OutputType}" Value="Webp">
+            <DataTrigger Binding="{Binding OutputType}" Value="webp">
                 <Setter Property="ContentTemplate" Value="{StaticResource JpgSettingsDataTemplate}"/>
             </DataTrigger>
         </Style.Triggers>
@@ -686,7 +686,9 @@
                          ToolTip="{x:Static project:Resources.FFMPEGCustomArgumentsTooltip}"
                          Text="{Binding Settings, ConverterParameter=FFMPEGCustomCommand|System.String, Converter={StaticResource ConversionSettingsToValueType}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
                 <TextBlock Grid.Row="1" Grid.Column="1" Margin="0,5,5,0">
-                    <Hyperlink CommandParameter="https://ffmpeg.org/ffmpeg.html" Command="{Binding DataContext.OpenUrlCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}, Mode=OneWay}"><x:Static Member="project:Resources.Help" /></Hyperlink>
+                    <Hyperlink CommandParameter="https://ffmpeg.org/ffmpeg.html" Command="{Binding DataContext.OpenUrlCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}, Mode=OneWay}">
+                        <Run Text="{x:Static project:Resources.Help}" />
+                    </Hyperlink>
                 </TextBlock>
 
             </Grid>

@@ -112,7 +112,7 @@ namespace FileConverter.ConversionJobs
 
             switch (this.ConversionPreset.OutputType)
             {
-                case OutputType.Aac:
+                case OutputType.aac:
                     {
                         string channelArgs = ConversionJob_FFMPEG.ComputeAudioChannelArgs(this.ConversionPreset);
 
@@ -127,7 +127,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Avi:
+                case OutputType.avi:
                     {
                         // https://trac.ffmpeg.org/wiki/Encode/MPEG-4
                         int videoEncodingQuality = this.ConversionPreset.GetSettingsValue<int>(ConversionPreset.ConversionSettingKeys.VideoQuality);
@@ -151,7 +151,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Flac:
+                case OutputType.flac:
                     {
                         string channelArgs = ConversionJob_FFMPEG.ComputeAudioChannelArgs(this.ConversionPreset);
 
@@ -164,7 +164,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Gif:
+                case OutputType.gif:
                     {
                         // http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html
                         string fileName = Path.GetFileName(this.InputFilePath);
@@ -195,7 +195,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Ico:
+                case OutputType.ico:
                     {
                         string encoderArgs = string.Empty;
                         string arguments = $"{baseArgs} -i \"{this.InputFilePath}\" {encoderArgs} \"{this.OutputFilePath}\"";
@@ -205,7 +205,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Jpg:
+                case OutputType.jpg:
                     {
                         int encodingQuality = this.ConversionPreset.GetSettingsValue<int>(ConversionPreset.ConversionSettingKeys.ImageQuality);
 
@@ -225,7 +225,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Mp3:
+                case OutputType.mp3:
                     {
                         string channelArgs = ConversionJob_FFMPEG.ComputeAudioChannelArgs(this.ConversionPreset);
 
@@ -253,8 +253,8 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Mkv:
-                case OutputType.Mp4:
+                case OutputType.mkv:
+                case OutputType.mp4:
                     {
                         // https://trac.ffmpeg.org/wiki/Encode/H.264
                         // https://trac.ffmpeg.org/wiki/Encode/AAC
@@ -305,7 +305,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Ogg:
+                case OutputType.ogg:
                     {
                         string channelArgs = ConversionJob_FFMPEG.ComputeAudioChannelArgs(this.ConversionPreset);
 
@@ -318,7 +318,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Ogv:
+                case OutputType.ogv:
                     {
                         // https://trac.ffmpeg.org/wiki/TheoraVorbisEncodingGuide
                         int videoEncodingQuality = this.ConversionPreset.GetSettingsValue<int>(ConversionPreset.ConversionSettingKeys.VideoQuality);
@@ -342,7 +342,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Png:
+                case OutputType.png:
                     {
                         float scaleFactor = this.ConversionPreset.GetSettingsValue<float>(ConversionPreset.ConversionSettingKeys.ImageScale);
                         string scaleArgs = string.Empty;
@@ -361,7 +361,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Wav:
+                case OutputType.wav:
                     {
                         string channelArgs = ConversionJob_FFMPEG.ComputeAudioChannelArgs(this.ConversionPreset);
 
@@ -374,7 +374,7 @@ namespace FileConverter.ConversionJobs
 
                     break;
 
-                case OutputType.Webm:
+                case OutputType.webm:
                     {
                         // https://trac.ffmpeg.org/wiki/Encode/VP9
                         int videoEncodingQuality = this.ConversionPreset.GetSettingsValue<int>(ConversionPreset.ConversionSettingKeys.VideoQuality);

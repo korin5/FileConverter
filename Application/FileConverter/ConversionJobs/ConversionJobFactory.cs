@@ -28,25 +28,25 @@ namespace FileConverter.ConversionJobs
                 return new ConversionJob_PowerPoint(conversionPreset, inputFilePath);
             }
 
-            if (conversionPreset.OutputType == OutputType.Ico)
+            if (conversionPreset.OutputType == OutputType.ico)
             {
                 return new ConversionJob_Ico(conversionPreset, inputFilePath);
             }
 
-            if (conversionPreset.OutputType == OutputType.Gif)
+            if (conversionPreset.OutputType == OutputType.gif)
             {
                 return new ConversionJob_Gif(conversionPreset, inputFilePath);
             }
 
-            if (conversionPreset.OutputType == OutputType.Pdf)
+            if (conversionPreset.OutputType == OutputType.pdf)
             {
                 return new ConversionJob_ImageMagick(conversionPreset, inputFilePath);
             }
 
-            if (conversionPreset.OutputType == OutputType.Avif ||
-                conversionPreset.OutputType == OutputType.Jpg ||
-                conversionPreset.OutputType == OutputType.Png ||
-                conversionPreset.OutputType == OutputType.Webp)
+            if (conversionPreset.OutputType == OutputType.avif ||
+                conversionPreset.OutputType == OutputType.jpg ||
+                conversionPreset.OutputType == OutputType.png ||
+                conversionPreset.OutputType == OutputType.webp)
             {
                 return new ConversionJob_ImageMagick(conversionPreset, inputFilePath);
             }
