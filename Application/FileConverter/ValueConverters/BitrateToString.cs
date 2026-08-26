@@ -17,7 +17,7 @@ namespace FileConverter.ValueConverters
 
             double bitrate = (double)value;
             
-            return $"{bitrate:0} kbit/s";
+            return $"{bitrate:0} kbps";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -619,7 +619,7 @@ namespace FileConverter.ConversionJobs
 
             public FFMpegPass(string arguments)
             {
-                this.Name = "Conversion";
+                this.Name = "转换中";
                 this.Arguments = arguments;
                 this.FileToDelete = string.Empty;
             }
